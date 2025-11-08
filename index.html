@@ -42,9 +42,56 @@
   </main>
 
   <footer class="site-footer">
-    <small>© <span id="year"></span> Yara_Feng</small>
+    <section id="faq">
+      <h2>💬 常见问题（Accordion 组件练习）</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">Q1：我为什么要学 JavaScript？</button>
+          <div class="accordion-content">
+            因为 JavaScript 是前端灵魂语言！它能让页面动起来，也能连通后端逻辑。
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">Q2：我需要框架吗？</button>
+          <div class="accordion-content">
+            先打好 JS 基础，再学框架会快得多！我们现在就在练“底层逻辑”。
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">Q3：老师今天心情好吗？</button>
+          <div class="accordion-content">
+            哈哈～当然好！因为有学生准备好了认真学 😎
+          </div>
+        </div>
+      </div>
+    </section>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+  
+  // 1️⃣ 选中所有的折叠项
+  const accordionItems = document.querySelectorAll('.accordion-item');
+
+  // 2️⃣ 遍历每一项，给标题按钮绑定点击事件
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+
+    header.addEventListener('click', () => {
+      // 如果当前项已是展开状态，点击则关闭
+      const isActive = item.classList.contains('active');
+
+      // 先关闭所有项
+      accordionItems.forEach(i => i.classList.remove('active'));
+
+      // 如果刚刚不是展开状态，就让它展开
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+  
+  </script>
 </body>
 </html>
