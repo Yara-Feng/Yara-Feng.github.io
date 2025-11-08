@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Yara_Blog</title>
-  </head>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yara_Feng · 主页</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>你好，我是 <span class="highlight">Yara_Feng</span></h1>
+    <p>这是我的个人主页</p>
+    <nav class="nav">
+      <a href="#podcast">播客</a>
+      <a href="#posts">文章</a>
+      <a href="#tech">技术文章</a>
+      <a href="#about">关于我</a>
+      <a href="mailto:f.dog.yaaa@gmail.com">联系我</a>
+    </nav>
+  </header>
 
-  <body>
-    <header>
-      <h1>你好，我是Yara_Feng</h1>
-      <p>这是我的个人主页</p>
-    </header>
+  <main class="container">
+    <section id="podcast">
+      <h2>🎙 播客</h2>
+      <p>这里放我的播客介绍。</p>
+    </section>
 
-    <main>
-      <section>
-        <h2>🎤 播客</h2>
-        <p>这里放我的播客介绍</p>
-      </section>
+    <section id="posts">
+      <h2>📝 文章</h2>
+      <p>这里放我的文章介绍。</p>
+    </section>
 
-      <section>
-        <h2>📝 文章</h2>
-        <p>这里放我的文章介绍</p>
-      </section>
+    <section id="tech">
+      <h2>💻 技术文章</h2>
+      <p>这里放我的技术文章介绍。</p>
+    </section>
 
-      <section>
-          <h3>技术文章</h3>
-          <p>这里放我的技术文章介绍</p>
-      </section>
+    <section id="about">
+      <h2>👋 关于我</h2>
+      <p>一句话自我介绍；目标岗位与关键词。</p>
+    </section>
+  </main>
 
-    </main>
-    <footer>
-      <p>联系我：<a href="mailto:f.dog.yaaa@gmail.com">f.dog.yaaa@gmail.com</a></p>
-    </footer>
-  </body>
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Yara_Feng</small>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
 </html>
