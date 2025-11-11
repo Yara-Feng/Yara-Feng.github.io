@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+主要在通过GPT来学习前端相关知识。
+
 <!--
 **Yara-Feng/Yara-Feng** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
